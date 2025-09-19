@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Times Table</title>
+        <script>
+            function generate() {
+                var x = document.getElementById("table").value;
+                var y = document.getElementById("row").value;
+                var result = document.getElementById("output");
+                result.innerHTML = " "
+                for(var i = 1; i <= y; i++) {
+                    result.innerHTML = x + " x " + i + " = " + (x * i) + "<br>" + result.innerHTML;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1> Times Table Generator</h1>
+        <form>
+            <p>Table <input type="text" id="table" value="0"></p>
+            <p>Row <input type="text" id="row" value="0"></p>
+            <p><button id="submit" type="button" onclick="generate()">Submit</button></p>
+        </form>
+        <p id="output"></p>
+    </body>
+</html>
